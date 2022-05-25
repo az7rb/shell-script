@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Twitter: az7rb
 echo -e " watch -n 3600 ./dryEye.sh"
 # Array tasks
 arr[0]="Do 10 Pushups"

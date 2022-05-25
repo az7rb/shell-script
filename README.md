@@ -1,4 +1,4 @@
-# shell-script
+# dryEye.sh
 shell script bash
 
 Usage is pretty simple.

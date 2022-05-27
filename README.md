@@ -1,5 +1,4 @@
 # dryEye.sh
-shell script bash
 
 Usage is pretty simple.
 
@@ -13,7 +12,6 @@ watch -n 3600 ./dryEye.sh
 ```
 
 # numberbook.sh
-shell script bash
 
 Usage is pretty simple.
 

